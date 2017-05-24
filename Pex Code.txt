@@ -1,0 +1,125 @@
+groups:
+  default:
+    options:
+      build: 'true'
+      default: 'true'
+    permissions:
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.help
+    - essentials.spawn
+    - essentials.sethome
+    - essentials.delhome
+    - essentials.home
+    - essentials.balance
+    - essentials.balancetop
+    - essentials.pay
+    - essentials.worth
+    - essentials.sell
+    - essentials.helpop
+    - essentials.depth
+    - essentials.warp
+    - essentials.warp.list
+    - essentials.afk
+    - essentials.afk.auto
+    - essentials.list
+    - essentials.rules
+    - essentials.mail
+    - essentials.mail.send
+    - essentials.msg
+    - essentials.suicide
+    - essentials.tpahere
+    - litebans.notify.broadcast
+  Builder:
+    inheritance:
+    - default
+    permissions:
+    - essentials.skull.others
+    - essentials.skull.modify
+    - essentials.skull
+    - multiverse.teleport.self.*
+    - multiverse.access.*
+    - multiverse.core.spawn.self
+    - multiverse.core.tp.self
+    - essentials.invsee
+    - essentials.tp
+    - skins.build.*
+    - skins.load
+    - colortest.colortest.*
+    - mobs.build.*
+    - -worldedit.reload
+    - -worldedit.superpickaxe.*
+    - worldguard.region.bypass.*
+    - worldedit.*
+    - essentials.gamemode
+    - essentials.gamemode.survival
+    - essentials.gamemode.creative
+    - essentials.fly
+    - essentials.msg.color
+    - essentials.nick
+    - essentials.clearinventory
+    - essentials.enderchest
+    - essentials.tptoggle
+    - essentials.speed
+    - essentials.speed.fly
+    - essentials.speed.walk
+    options:
+      prefix: '&0[&8Builder&0]&r'
+  Moderator:
+    permissions:
+    - litebans.unlimited
+    - litebans.warn
+    - litebans.clearchat
+    - litebans.lockdown.bypass
+    - litebans.notify.dupeip_join
+    - litebans.ipban
+    - litebans.ipmute
+    - litebans.staffhistory
+    - litebans.warnings
+    - litebans.history
+    - litebans.iphistory
+    - litebans.dupeip.viewip
+    - adminfun.freeze
+    options:
+      prefix: '&0[&BMod&0]&5'
+    inheritance:
+    - default
+    - helper
+    - trainee
+  helper:
+    inheritance:
+    - trainee
+    options:
+      prefix: '&0[&6Helper&0]&2'
+  trainee:
+    inheritance:
+    - helper
+    permissions:
+    - litebans.warn
+    - litebans.mute
+    - litebans.kick
+    - litebans.checkban
+    - litebans.notify.*
+    options:
+      prefix: '&0[&6Trainee&0]&2'
+  SnrMod:
+    options:
+      prefix: '&0[&1SrMod&0]&9'
+    permissions:
+    - essentials.vanish
+    - litebans.*
+    - essentials.*
+    inheritance:
+    - Moderator
+  Staff:
+    options:
+      prefix: '&b'
+    permissions:
+    - essentials.vanish
+    inheritance:
+    - helper
+  owner:
+    options:
+      prefix: '&0[&6Owner&0]'
+schema-version: 1
